@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'ru.shift.utility'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'commons-cli:commons-cli:1.10.0'
+}
+
+application {
+    mainClass = 'ru.shift.utility.FileContentFilterUtility'
+}
+
+test {
+    useJUnitPlatform()
+}
+

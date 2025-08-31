@@ -6,6 +6,7 @@ import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
@@ -67,9 +68,10 @@ public class ArgumentParser {
             .map(Paths::get)
             .toList();
 
-    Path outputPath = commandLine.hasOption("o")
-            ? Paths.get(commandLine.getOptionValue("o"))
-            : null;
+    Path outputPath = commandLine.hasOption("o") ? Paths.get(commandLine.getOptionValue("o")) : null;
+    if (outputPath != null && (!Files.isDirectory(outputPath) || !Files.exists(outputPath))) {
+      throw new ParseException("Uncorrected output directory: " + outputPath);
+    }
 
     String prefix = commandLine.hasOption("p")
             ? commandLine.getOptionValue("p")

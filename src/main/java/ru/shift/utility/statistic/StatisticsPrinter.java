@@ -1,6 +1,13 @@
 package ru.shift.utility.statistic;
 
+/**
+ * The Statistics Printer class is responsible for outputting statistics to the console
+ */
 public class StatisticsPrinter {
+  /**
+   * The method generates and outputs short statistics
+   * @param statistics Instance of the {@link Statistics} class
+   */
   static void printShortStatistics(Statistics statistics) {
     System.out.printf("""
                     Short statistics:
@@ -11,7 +18,11 @@ public class StatisticsPrinter {
             statistics.getQuantityIntegerLines(), statistics.getQuantityFloatLines(),statistics.getQuantityStringLines());
   }
 
-  static void printFullStatistics(FullStatistic statistics) {
+  /**
+   * The method generates and outputs full statistics
+   * @param statistics Instance of the {@link FullStatistics} class
+   */
+  static void printFullStatistics(FullStatistics statistics) {
     System.out.printf("""
                     Full statistics:
                     [1mInteger[0m: min = %s, max = %s, sum = %s, avg = %s

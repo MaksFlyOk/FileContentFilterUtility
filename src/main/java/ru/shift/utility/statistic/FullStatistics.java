@@ -4,19 +4,50 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.RoundingMode;
 
-public class FullStatistic extends Statistics {
+/**
+ * The FullStatistics class is responsible for collecting full statistics
+ */
+public class FullStatistics extends Statistics {
+  /**
+   * Minimum number of type {@code Integer}
+   */
   private BigInteger minInteger;
+  /**
+   * Maximum number of type {@code Integer}
+   */
   private BigInteger maxInteger;
+  /**
+   * Sum of all numbers of type {@code Integer}
+   */
   private BigInteger sumInteger;
 
+  /**
+   * Minimum number of type {@code Float}
+   */
   private BigDecimal minFloat;
+  /**
+   * Maximum number of type {@code Float}
+   */
   private BigDecimal maxFloat;
+  /**
+   * Sum of all numbers of type {@code Float}
+   */
   private BigDecimal sumFloat;
 
+  /**
+   * Number of characters in the shortest string of type {@code String}
+   */
   private int shortestStringLength;
+  /**
+   * Number of characters in the longest string of type {@code String}
+   */
   private int longestStringLength;
 
-  public FullStatistic() {
+  /**
+   * Constructor of the FullStatistics class
+   * This constructor sets the initial values to zero for the fields: {@link #quantityIntegerLines}, {@link #quantityFloatLines}, {@link #quantityIntegerLines}
+   */
+  public FullStatistics() {
     super();
   }
 
@@ -68,46 +99,87 @@ public class FullStatistic extends Statistics {
     if (longestStringLength < line.length()) longestStringLength = line.length();
   }
 
-  public BigInteger getMaxInteger() {
-    return maxInteger;
-  }
-
+  /**
+   * Getter {@link #minInteger}
+   * @return Minimum number of type {@code Integer}
+   */
   public BigInteger getMinInteger() {
     return minInteger;
   }
 
+  /**
+   * Getter {@link #maxInteger}
+   * @return Maximum number of type {@code Integer}
+   */
+  public BigInteger getMaxInteger() {
+    return maxInteger;
+  }
+
+  /**
+   * Getter {@link #sumInteger}
+   * @return The sum of all numbers of type {@code Integer}
+   */
   public BigInteger getSumInteger() {
     return sumInteger;
   }
 
+  /**
+   * This method calculates the average value of the {@code Integer} type
+   * @return Average value of type {@code Integer}
+   */
   public BigDecimal getAverageInteger() {
     return quantityIntegerLines == 0 ? BigDecimal.ZERO : new BigDecimal(sumInteger).divide(BigDecimal.valueOf(quantityIntegerLines), 4, RoundingMode.HALF_EVEN);
   }
 
-  public BigDecimal getMaxFloat() {
-    return maxFloat;
-  }
-
+  /**
+   * Getter {@link #minFloat}
+   * @return Minimum number of type {@code Float}
+   */
   public BigDecimal getMinFloat() {
     return minFloat;
   }
 
+  /**
+   * Getter {@link #maxFloat}
+   * @return Minimum number of type {@code Float}
+   */
+  public BigDecimal getMaxFloat() {
+    return maxFloat;
+  }
+
+  /**
+   * Getter {@link #sumFloat}
+   * @return The sum of all numbers of type {@code Float}
+   */
   public BigDecimal getSumFloat() {
     return sumFloat;
   }
 
+  /**
+   * This method calculates the average value of the {@code Float} type
+   * @return Average value of type {@code Float}
+   */
   public BigDecimal getAverageFloat() {
     return quantityFloatLines == 0 ? BigDecimal.ZERO : sumFloat.divide(BigDecimal.valueOf(quantityFloatLines), 4, RoundingMode.HALF_EVEN);
   }
 
-  public int getLongestStringLength() {
-    return longestStringLength;
-  }
-
+  /**
+   * Getter {@link #shortestStringLength}
+   * @return Number of characters in the shortest string of type {@code String}
+   */
   public int getShortestStringLength() {
     return shortestStringLength;
   }
 
+  /**
+   * Getter {@link #longestStringLength}
+   * @return Number of characters in the longest string of type {@code String}
+   */
+  public int getLongestStringLength() {
+    return longestStringLength;
+  }
+
+  @Override
   public void printStatistics() {
     StatisticsPrinter.printFullStatistics(this);
   }

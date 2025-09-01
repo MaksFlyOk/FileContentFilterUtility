@@ -103,9 +103,9 @@ public class ArgumentParser {
             Usage: FileContentFilterUtility [options] <input files>""";
     String footer = """
 
-            Examples:
+            Examples of use:
               FileContentFilterUtility file1.txt file2.txt
-              FileContentFilterUtility -o /output/path -p myprefix_ file1.txt file2.txt
+              FileContentFilterUtility -o /output -p prefix file1.txt
               FileContentFilterUtility -a -f file1.txt file2.txt""";
 
     HelpFormatter formatter = new HelpFormatter();

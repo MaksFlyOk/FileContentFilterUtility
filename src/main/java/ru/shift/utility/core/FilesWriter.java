@@ -20,7 +20,9 @@ public class FilesWriter {
 
   /**
    * Constructor of the FilesWriter class
-   * This constructor sets the passed value of {@link #outputPath}, if prefix is not {@code null}, then sets it with the suffix {@code "-"}, and also processes the {@param appendMode} parameter, if it is {@code true}, then clears the files with the results in the specified {@link #outputPath} directory
+   * This constructor sets the passed value of {@link #outputPath}, if prefix is not {@code null}, then sets it with
+   * the suffix {@code "-"}, and also processes the {@param appendMode} parameter, if it is {@code true}, then
+   * clears the files with the results in the specified {@link #outputPath} directory
    * @param prefix Output file name prefix
    * @param outputPath Path to results
    * @param appendMode Activation of the option to add the result to existing files

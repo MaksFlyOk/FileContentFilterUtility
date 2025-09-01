@@ -45,7 +45,8 @@ public class FullStatistics extends Statistics {
 
   /**
    * Constructor of the FullStatistics class
-   * This constructor sets the initial values to zero for the fields: {@link #quantityIntegerLines}, {@link #quantityFloatLines}, {@link #quantityIntegerLines}
+   * This constructor sets the initial values to zero for the fields: {@link #quantityIntegerLines},
+   * {@link #quantityFloatLines}, {@link #quantityIntegerLines}
    */
   public FullStatistics() {
     super();

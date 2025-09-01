@@ -13,7 +13,35 @@ import java.util.List;
 
 import static ru.shift.utility.cli.ArgumentParser.parseArgs;
 
+/**
+ * The main utility class for filtering and classifying data from files
+ * <p>
+ * The utility is designed to read data from input files, classify each line into integers, real numbers or strings,
+ * write the filtered data to separate output files and collect statistics for each data type
+ * <p>
+ * Supported options:
+ * <pre>
+ * - Specifying the path for output files via the -o option
+ * - Specifying a prefix for output file names via the -p option
+ * - The mode of adding data to existing files via the -a option
+ * - Outputting brief statistics via the -s option
+ * - Outputting full statistics via the -f option
+ * </pre>
+ * Examples of use:
+ * <pre>
+ * FileContentFilterUtility file1.txt file2.txt
+ * FileContentFilterUtility -o /output -p prefix file1.txt
+ * FileContentFilterUtility -a -f file1.txt file2.txt
+ * </pre>
+ */
 public class FileContentFilterUtility {
+  /**
+   * Entry point to the application
+   * The method processes command line arguments, filters data from input files, writes filtered data to the
+   * corresponding output files, and outputs statistics if requested via command line options
+   *
+   * @param args command line arguments containing paths to input files and options
+   */
   public static void main(String[] args) {
     try {
       Params params = parseArgs(args);

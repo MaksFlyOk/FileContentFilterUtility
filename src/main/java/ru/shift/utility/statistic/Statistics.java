@@ -24,7 +24,8 @@ public class Statistics {
 
   /**
    * Constructor of the Statistics class
-   * This constructor sets the initial values to zero for the fields: {@link #quantityIntegerLines}, {@link #quantityFloatLines}, {@link #quantityIntegerLines}
+   * This constructor sets the initial values to zero for the fields: {@link #quantityIntegerLines},
+   * {@link #quantityFloatLines}, {@link #quantityIntegerLines}
    */
   public Statistics() {
     this.quantityIntegerLines = 0;

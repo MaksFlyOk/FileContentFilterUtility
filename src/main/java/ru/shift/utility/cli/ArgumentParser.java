@@ -28,9 +28,15 @@ public class ArgumentParser {
     options.addOption("a", "append", false, "Append the result to the existing file or replace it with new data");
     options.addOption("s", "short", false, "Short statistic");
     options.addOption("f", "full", false, "Full statistic");
+    options.addOption("h", "help", false, "Print this help message");
 
     try {
       CommandLine commandLine = new DefaultParser().parse(options, args);
+
+      if (commandLine.hasOption("h")) {
+        printHelp(options);
+        System.exit(0);
+      }
 
       if(commandLine.getArgList().isEmpty()) throw new ParseException("Not enough files specified");
 
@@ -38,11 +44,7 @@ public class ArgumentParser {
     } catch (ParseException e) {
       if(args.length > 0) System.out.println(e.getMessage());
       else {
-        String header = "This app is a task for Shift";
-        String footer = "";
-
-        HelpFormatter formatter = new HelpFormatter();
-        formatter.printHelp("FileContentFilterUtility", header, options, footer, true);
+        printHelp(options);
       }
       throw e;
     }
@@ -87,5 +89,26 @@ public class ArgumentParser {
             commandLine.hasOption("f"),
             inputFiles
     );
+  }
+
+  /**
+   * This method is required to output help
+   * @param options Represents a collection of {@link Options} objects, which describe the possible options for a command-line
+   */
+  private static void printHelp(Options options) {
+    String header = """
+            File Content Filter Utility
+
+            This app filters content from input files into separate files for integers, floats, and strings.
+            Usage: FileContentFilterUtility [options] <input files>""";
+    String footer = """
+
+            Examples:
+              FileContentFilterUtility file1.txt file2.txt
+              FileContentFilterUtility -o /output/path -p myprefix_ file1.txt file2.txt
+              FileContentFilterUtility -a -f file1.txt file2.txt""";
+
+    HelpFormatter formatter = new HelpFormatter();
+    formatter.printHelp("FileContentFilterUtility", header, options, footer, true);
   }
 }

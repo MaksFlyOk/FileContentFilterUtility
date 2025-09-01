@@ -21,8 +21,6 @@ public class LineClassifier {
    * @return Returns the type of the passed line according to {@link LineType}
    */
   public static LineType getType(String line) {
-    if (line.isBlank()) return null;
-
     if (INTEGER_PATTERN.matcher(line).matches()) {
       return LineType.INTEGER;
     }

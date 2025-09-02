@@ -23,12 +23,12 @@ public class ArgumentParser {
    */
   public static CommandLine parse(String[] args) throws ParseException {
     Options options = new Options();
-    options.addOption("o", "output", true, "Path to results");
-    options.addOption("p", "prefix", true, "Prefix for file names");
-    options.addOption("a", "append", false, "Append the result to the existing file or replace it with new data");
-    options.addOption("s", "short", false, "Short statistic");
-    options.addOption("f", "full", false, "Full statistic");
-    options.addOption("h", "help", false, "Print this help message");
+    options.addOption("o", "-output", true, "Path to results");
+    options.addOption("p", "-prefix", true, "Prefix for file names");
+    options.addOption("a", "-append", false, "Append the result to the existing file or replace it with new data");
+    options.addOption("s", "-short", false, "Short statistic");
+    options.addOption("f", "-full", false, "Full statistic");
+    options.addOption("h", "-help", false, "Print this help message");
 
     try {
       CommandLine commandLine = new DefaultParser().parse(options, args);

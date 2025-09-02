@@ -21,11 +21,11 @@ public class ArgumentParserTest {
    */
   @Test
   public void testParseArgs() throws ParseException {
-    String[] args = {"-o", "./src/test/resources/test/output", "-p", "prefix", "-a", "-f", "file1.txt", "file2.txt"};
+    String[] args = {"-o", "./src/test/resources", "-p", "prefix", "-a", "-f", "file1.txt", "file2.txt"};
     Params params = ArgumentParser.parseArgs(args);
 
     assertTrue(params.oEnabled());
-    assertEquals(Paths.get("./src/test/resources/test/output"), params.writeFilesPath());
+    assertEquals(Paths.get("./src/test/resources"), params.writeFilesPath());
     assertTrue(params.pEnabled());
     assertEquals("prefix", params.filePrefix());
     assertTrue(params.aEnabled());

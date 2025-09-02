@@ -52,7 +52,7 @@
    java  -jar build/libs/Shift-FileContentFilterUtility-1.0.0.jar --help
    ```
 
-> В директории _./src/test/resources_ вы найдете тестовые файлы для проверки утилиты. Так же _./src/test/resources/test/output_ можете использовать как тестовый путь для сохранения результата работы утилиты.
+> В директории _./src/test/resources_ вы найдете тестовые файлы для проверки утилиты. Так же _./src/test/resources_ можете использовать как тестовый путь для сохранения результата работы утилиты.
 
 ## Опции
 
@@ -68,11 +68,11 @@
 ### Примеры использования
 
    ```bash
-   java -jar build/libs/Shift-FileContentFilterUtility-1.0.0.jar -f -o ./src/test/resources/test/output .\src\test\resources\file3.txt
+   java -jar build/libs/Shift-FileContentFilterUtility-1.0.0.jar -f -o ./src/test/resources/ .\src\test\resources\file3.txt
    ```
 
    ```bash
-   java -jar build/libs/Shift-FileContentFilterUtility-1.0.0.jar -s -a -o ./src/test/resources/test/output .\src\test\resources\file1.txt .\src\test\resources\file2.txt
+   java -jar build/libs/Shift-FileContentFilterUtility-1.0.0.jar -s -a -o ./src/test/resources/ .\src\test\resources\file1.txt .\src\test\resources\file2.txt
    ```
 > В справке указаны все опции, а также примеры использования.
 

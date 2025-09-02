@@ -17,12 +17,12 @@
 
 ## Требования
 
-- _Java 21 или_ выше.
-- _Gradle 8.5_ для сборки проекта.
+- `Java 21` или выше.
+- `Gradle 8.5` для сборки проекта.
 
 ---
 
-## Используемые библиотеки:
+## Используемые библиотеки
 
 - [JUnit Jupiter API 5.10.0](https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api/5.10.0)
 - [Apache Commons CLI 1.9.0](https://mvnrepository.com/artifact/commons-cli/commons-cli/1.9.0)
@@ -47,15 +47,35 @@
    gradlew build
    ```
 
-4. Запустите утилиту (вы увидите справку):
+4. Запустите утилиту (вы увидите справку по использованию утилиты):
    ```bash
    java  -jar build/libs/Shift-FileContentFilterUtility-1.0.0.jar --help
    ```
 
 > В директории _./src/test/resources_ вы найдете тестовые файлы для проверки утилиты. Так же _./src/test/resources/test/output_ можете использовать как тестовый путь для сохранения результата работы утилиты.
 
-> В справке указаны все опции, а также примеры использования.
+## Опции
 
+| Опция                  | Описание                                                          |
+|------------------------|-------------------------------------------------------------------|
+| `-o`, `--output <arg>` | Путь к директории для сохранения выходных файлов                  |
+| `-p`, `--prefix <arg>` | Префикс для имен выходных файлов                                  |
+| `-a`, `--append`       | Режим добавления данных в существующие файлы                      |
+| `-s`, `--short`        | Вывод краткой статистики                                          |
+| `-f`, `--full`         | Вывод полной статистики                                           |
+| `-h`, `--help`         | Вывод справки по использованию утилиты                            |
+
+> В справке указаны все опции, а также примеры использования.
+ 
+### Примеры использования
+
+   ```bash
+   java -jar build/libs/Shift-FileContentFilterUtility-1.0.0.jar -f -o ./src/test/resources/test/output .\src\test\resources\file3.txt
+   ```
+
+   ```bash
+   java -jar build/libs/Shift-FileContentFilterUtility-1.0.0.jar -s -a -o ./src/test/resources/test/output .\src\test\resources\file1.txt .\src\test\resources\file2.txt
+   ```
 ---
 
 ## Запуск тестов

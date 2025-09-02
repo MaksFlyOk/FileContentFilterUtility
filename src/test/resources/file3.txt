@@ -1,0 +1,52 @@
+Lorem ipsum dolor sit amet
+42
+Пример текста
+3.1415926535
+consectetur adipiscing elit
+-45.678
+тестовое задание номер один
+100500
+sed do eiusmod tempor
+123456789
+incididunt ut labore
+-1.23456789E10
+et dolore magna aliqua
+7
+Ut enim ad minim veniam
+2.7182818284
+quis nostrud exercitation
+-0.0000001
+ullamco laboris nisi
+47
+ut aliquip ex ea commodo
+1.6180339887
+consequat
+-999999999
+Duis aute irure dolor
+333
+in reprehenderit in voluptate
+0.9999999999
+velit esse cillum dolore
+-12345
+eu fugiat nulla pariatur
+144
+Excepteur sint occaecat
+9.80665
+cupidatat non proident
+-2.5
+Sunt in culpa qui officia
+500000
+deserunt mollit anim
+1.4142135623
+id est laborum
+-333.333
+Пример строки на русском
+1000000000
+Еще одна строка
+-7.5
+Последний пример текста
+404
+И еще одна строка
+6.02214076E23
+Финальная строка
+-100

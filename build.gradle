@@ -26,6 +26,17 @@ application {
     mainClass = 'ru.shift.utility.FileContentFilterUtility'
 }
 
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'ru.shift.utility.FileContentFilterUtility'
+        )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
 test {
     useJUnitPlatform()
 }

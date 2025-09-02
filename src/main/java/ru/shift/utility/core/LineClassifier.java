@@ -9,7 +9,7 @@ public class LineClassifier {
   /**
    * Regular expression pattern for detecting {@code integers}
    */
-  private static final Pattern INTEGER_PATTERN = Pattern.compile("\\b-?\\d+\\b");
+  private static final Pattern INTEGER_PATTERN = Pattern.compile("^[+-]?\\d+\\s*$");
   /**
    * Regular expression pattern for detecting {@code float}
    */

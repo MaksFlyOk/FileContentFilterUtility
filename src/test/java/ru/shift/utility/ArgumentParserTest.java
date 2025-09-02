@@ -1,3 +1,5 @@
+package ru.shift.utility;
+
 import org.apache.commons.cli.ParseException;
 import org.junit.jupiter.api.Test;
 import ru.shift.utility.cli.ArgumentParser;

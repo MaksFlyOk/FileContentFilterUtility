@@ -1,3 +1,5 @@
+package ru.shift.utility;
+
 import org.junit.jupiter.api.Test;
 import ru.shift.utility.core.LineClassifier;
 import ru.shift.utility.core.LineType;

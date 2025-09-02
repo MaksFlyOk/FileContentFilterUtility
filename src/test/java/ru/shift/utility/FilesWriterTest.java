@@ -1,3 +1,5 @@
+package ru.shift.utility;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.io.TempDir;
 import ru.shift.utility.core.FilesWriter;

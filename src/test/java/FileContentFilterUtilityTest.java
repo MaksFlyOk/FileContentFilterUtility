@@ -17,11 +17,20 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 import static ru.shift.utility.cli.ArgumentParser.parseArgs;
 
+/**
+ * The {@link FileContentFilterUtilityTest} class is required for integration testing of the utility
+ */
 public class FileContentFilterUtilityTest {
-
+  /**
+   * Temporary directory required for tests
+   */
   @TempDir
   Path tempDir;
 
+  /**
+   * This test is an integration test and is aimed at testing the operation of the utility
+   * @throws IOException When an error occurs related to reading/writing to files
+   */
   @Test
   public void testMainLogic() throws IOException {
     Path inputFile = tempDir.resolve("input.txt");

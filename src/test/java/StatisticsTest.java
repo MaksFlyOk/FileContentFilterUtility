@@ -4,8 +4,15 @@ import ru.shift.utility.statistic.Statistics;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * The {@link StatisticsTest} class is required to test the {@link Statistics} class
+ */
 public class StatisticsTest {
 
+  /**
+   * Test of method {@link Statistics#processLine(LineType, String)} of class {@link Statistics} when processing
+   * lines of different types
+   */
   @Test
   public void testUpdateStats() {
     Statistics statistics = new Statistics();

@@ -8,11 +8,20 @@ import java.nio.file.Path;
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * The {@link FilesWriterTest} class is required to test the {@link FilesWriter} class
+ */
 public class FilesWriterTest {
-
+  /**
+   * Temporary directory required for tests
+   */
   @TempDir
   Path tempDir;
 
+  /**
+   * Test of the {@link FilesWriter#lineWrite(String, String)} method of the {@link FilesWriter} class
+   * @throws IOException  When an error occurs while writing to a file
+   */
   @Test
   public void testLineWrite() throws IOException {
     Path outputDir = tempDir;

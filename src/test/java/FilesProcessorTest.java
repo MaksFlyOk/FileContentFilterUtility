@@ -8,11 +8,20 @@ import java.nio.file.Path;
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * The {@link FilesProcessorTest} class is required to test the {@link FilesProcessor} class
+ */
 public class FilesProcessorTest {
-
+  /**
+   * Temporary directory required for tests
+   */
   @TempDir
   Path tempDir;
 
+  /**
+   * Test of method {@link FilesProcessor#fileHandling(List)} of class {@link FilesProcessor} with non-empty input file
+   * @throws IOException  When there is an error reading the file
+   */
   @Test
   public void testFileHandling() throws IOException {
     Path testFile = tempDir.resolve("test.txt");
@@ -26,6 +35,10 @@ public class FilesProcessorTest {
     assertTrue(lines.contains("Lorem ipsum"));
   }
 
+  /**
+   * Test of method {@link FilesProcessor#fileHandling(List)} of class {@link FilesProcessor} with empty input file
+   * @throws IOException  When there is an error reading the file
+   */
   @Test
   public void testFileHandlingEmptyFile() throws IOException {
     Path testFile = tempDir.resolve("empty.txt");

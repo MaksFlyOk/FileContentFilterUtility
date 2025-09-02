@@ -7,8 +7,15 @@ import java.math.BigInteger;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+/**
+ * The {@link FullStatisticsTest} class is required to test the {@link FullStatistics} class
+ */
 public class FullStatisticsTest {
 
+  /**
+   * Test of method {@link FullStatistics#processLine(LineType, String)} of class {@link FullStatistics} when
+   * processing lines of type {@code Integer}
+   */
   @Test
   public void testUpdateInteger() {
     FullStatistics statistics = new FullStatistics();
@@ -25,6 +32,10 @@ public class FullStatisticsTest {
     assertEquals(new BigDecimal("152.0000"), statistics.getAverageInteger());
   }
 
+  /**
+   * Test of method {@link FullStatistics#processLine(LineType, String)} of class {@link FullStatistics} when
+   * processing lines of type {@code Float}
+   */
   @Test
   public void testUpdateFloat() {
     FullStatistics statistics = new FullStatistics();
@@ -40,6 +51,10 @@ public class FullStatisticsTest {
     assertEquals(new BigDecimal("4410666666666666666666667.7130"), statistics.getAverageFloat());
   }
 
+  /**
+   * Test of method {@link FullStatistics#processLine(LineType, String)} of class {@link FullStatistics} when
+   * processing lines of type {@code String}
+   */
   @Test
   public void testUpdateString() {
     FullStatistics stats = new FullStatistics();
